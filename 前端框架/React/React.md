@@ -1,7 +1,5 @@
 
 
-
-
 # 1.邂逅React开发
 
 
@@ -2677,7 +2675,9 @@ try {
 
 #### Switch
 
-![image-20210320143452130](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210320143452130.png)
+![img](https://docimg4.docs.qq.com/image/_Ttmciqh3f3mmid3ET4oQw?w=943&h=585)
+
+
 
 ![image-20210320143705899](https://i.loli.net/2021/03/20/MuogJeDk5mjwcKl.png)
 
