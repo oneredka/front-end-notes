@@ -108,6 +108,9 @@ Git 的起始操作包括以下几个步骤
 
 * <span style="color:red">git status</span> 版本状态查看 
 * <span style="color:red">git add -A</span> 添加所有新文件到暂存区
+  * git add -A  提交所有变化
+  * git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+  * git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
 * <span style="color:red">git commit -m '注释 '</span> 提交修改并注释
 * `git diff`  查看工作区与暂存区的差异（不显示新增文件） 显示做了哪些修改
 * `git diff --cached` 查看暂存区与仓库的差异
@@ -274,6 +277,8 @@ GitHub 远程仓库使用流程较为简单，主要有以下几种场景：
    -u   关联, 加上以后,后续提交时可以直接使用 git push
    origin 远端仓库的别名
    master 本地仓库的分支
+   
+   
    ```
 
 #### <span style="color:red">本地没有仓库</span>
