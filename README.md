@@ -6,7 +6,9 @@
 
 此教程不含任何套路，全是干货，**永不收费**。从8月6号开始每日进行更新。
 
-如果有错误的信息，欢迎在 GitHub 提交 issues 或者 pull requests 或者到我B站 https://space.bilibili.com/145679856 私信我 进行指正。
+如果有错误的信息，欢迎在 GitHub 提交 issues 或者 pull requests 或者到我**B站 https://space.bilibili.com/145679856** 私信我 进行指正。
+
+目前在做开发后期我会根据情况录制视频来对应理解
 
 **希望所有的努力和相遇都不会被辜负**。
 
