@@ -35,9 +35,9 @@ JavaScript 是 ECMAScript 规范的一种实现，本小节重点梳理下 ECMAS
 
 ### 手写深拷贝
 
-![image-20210704130444575](C:\Users\云牧丫\Desktop\前端学习笔记\图片资源\图片\image-20210704130444575.png)
 
 
+![image-20210704130444575](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20210811145307.png)
 
 ![image-20201231161628230](https://i.loli.net/2020/12/31/KH4AomRyDeJIlaS.png)
 
@@ -216,19 +216,19 @@ JS 需要异步的根本原因是 **JS 是单线程运行的**，即在同一时
 
 **Ajax 代码示例**
 
-[![DdWVBR.png](https://s3.ax1x.com/2020/11/25/DdWVBR.png)](https://imgchr.com/i/DdWVBR)
+[![DdWVBR.png](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20210811151005.png)](https://imgchr.com/i/DdWVBR)
 
 **img 代码示例**
 
-[![DdWcEq.png](https://s3.ax1x.com/2020/11/25/DdWcEq.png)](https://imgchr.com/i/DdWcEq)
+[![DdWcEq.png](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20210811151030.png)](https://imgchr.com/i/DdWcEq)
 
 **定时器代码示例**
 
-[![DdWq56.png](https://s3.ax1x.com/2020/11/25/DdWq56.png)](https://imgchr.com/i/DdWq56)
+[![DdWq56.png](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20210811151037.png)](https://imgchr.com/i/DdWq56)
 
 
 
-[![DdWvxe.png](https://s3.ax1x.com/2020/11/25/DdWvxe.png)](https://imgchr.com/i/DdWvxe)
+[![DdWvxe.png](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20210811151051.png)](https://imgchr.com/i/DdWvxe)
 
 
 
@@ -681,7 +681,9 @@ document.querySelector()
 document.querySelectorAll()
 ```
 
-![image-20210704170332704](C:\Users\云牧丫\Desktop\前端学习笔记\图片资源\图片\image-20210704170332704.png)
+
+
+![image-20210704170332704](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20210811145226.png)
 
 
 
@@ -874,8 +876,6 @@ xhr.send(null);
 
 
 
-![image-20210704171827116](C:\Users\云牧丫\Desktop\前端学习笔记\图片资源\图片\image-20210704171827116.png)
-
 
 
 ### 常见的HTTP headers
@@ -922,9 +922,7 @@ xhr.send(null);
 
     
 
-  - 
-
-    Last-Modified
+  - Last-Modified
 
     Etag
 
