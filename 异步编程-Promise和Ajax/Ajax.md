@@ -1262,8 +1262,6 @@ xhr.send(null);
 
 
 
-![image-20201211195741242](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201211195741242.png)
-
 # 8.封装ajax
 
 
