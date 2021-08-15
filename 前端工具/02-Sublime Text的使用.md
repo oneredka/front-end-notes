@@ -57,7 +57,7 @@
 
 （1）选择菜单栏"Tools --> SublimeServer --> Start SublimeServer"启动服务器。
 
-（2）在html文档里，右键选择 "View in SublimeServer"。
+（2）在html文档里，右键选	择 "View in SublimeServer"。
 
 如果想关闭服务器，直接把Sublime Text 整个软件关掉就好。其他的关闭方式容易导致软件卡死。
 
