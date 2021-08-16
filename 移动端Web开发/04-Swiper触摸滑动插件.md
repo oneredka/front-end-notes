@@ -363,3 +363,300 @@ const mySwiper = new Swiper('#swiper', {
  })
 ```
 
+
+
+
+
+## Tab切换
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab 切换</title>
+    <link rel="stylesheet" href="./swiper-bundle.min.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      a:hover {
+        color: #409eff;
+      }
+      li {
+        list-style: none;
+      }
+      body {
+        padding: 24px;
+      }
+      .tab-header {
+        display: flex;
+        justify-content: space-between;
+        line-height: 30px;
+      }
+      .tab-label-active {
+        color: #409eff;
+        border-bottom: 2px solid #409eff;
+      }
+      .tab-item {
+        line-height: 40px;
+        border-bottom: 1px solid #ebebeb;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tab-header" class="tab-header">
+      <a href="javascript:;" class="tab-label tab-label-active" data-index="0"
+        >在线演示</a
+      >
+      <a href="javascript:;" class="tab-label" data-index="1">中文教程</a>
+      <a href="javascript:;" class="tab-label" data-index="2">获取 Swiper</a>
+    </div>
+    <div id="tab-content" class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <ul>
+            <li class="tab-item">Swiper 基础演示</li>
+            <li class="tab-item">Swiper 精彩应用（移动）</li>
+            <li class="tab-item">Swiper 精彩应用（PC）</li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul>
+            <li class="tab-item">Swiper 使用方法</li>
+            <li class="tab-item">Swiper Animate 使用方法</li>
+            <li class="tab-item">Swiper 与 DOM</li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul>
+            <li class="tab-item">下载 Swiper</li>
+            <li class="tab-item">Swiper CDN 地址</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./swiper-bundle.min.js"></script>
+    <script>
+      const $tabHeader = document.getElementById('tab-header');
+      const $tabLabels = $tabHeader.querySelectorAll('.tab-label');
+
+      const tabSwiper = new Swiper('#tab-content', {
+        autoplay: true,
+        on: {
+          slideChangeTransitionEnd() {
+            // console.log(this.activeIndex);
+            for (const $el of $tabLabels) {
+              $el.classList.remove('tab-label-active');
+            }
+            $tabLabels[this.activeIndex].classList.add('tab-label-active');
+          }
+        }
+      });
+
+      // 点击切换选项卡--事件代理
+      $tabHeader.addEventListener(
+        'click',
+        evt => {
+          const $el = evt.target;
+
+          if ($el.classList.contains('tab-label')) {
+            tabSwiper.slideTo($el.dataset.index);
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
+```
+
+
+
+
+
+## 页面的滑动切换
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>页面滑动切换</title>
+    <link rel="stylesheet" href="./swiper-bundle.min.css" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .swiper-container {
+        width: 100vw;
+        height: 100vh;
+      }
+      .swiper-slide {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .logistics-slide {
+        background-color: #57cfe1;
+      }
+      .purchase-slide {
+        background-color: #fe8e34;
+      }
+      .logistics-text,
+      .purchase-text {
+        position: absolute;
+        width: 214px;
+        opacity: 0;
+        transition: all 1s 0.5s;
+      }
+      .logistics-text-active,
+      .purchase-text-active {
+        opacity: 1;
+      }
+      .logistics-text {
+        top: 50px;
+      }
+      .purchase-text {
+        bottom: 40px;
+      }
+      .logistics-phone,
+      .logistics-person,
+      .purchase-phone,
+      .purchase-person {
+        position: absolute;
+        width: 180px;
+        transition: all 0.5s;
+      }
+      .logistics-phone {
+        bottom: 0;
+        transform: translate3d(-1000px, 0, 0);
+      }
+      .logistics-phone-active {
+        transform: translate3d(-70px, 0, 0);
+      }
+      .logistics-person {
+        bottom: 0;
+        transform: translate3d(1000px, 0, 0);
+      }
+      .logistics-person-active {
+        transform: translate3d(70px, 0, 0);
+      }
+      .purchase-person {
+        top: 50px;
+        transform: translate3d(-70px, -1000px, 0);
+      }
+      .purchase-person-active {
+        top: 50px;
+        transform: translate3d(-70px, 0, 0);
+      }
+      .purchase-phone {
+        top: 120px;
+        transform: translate3d(70px, 1000px, 0);
+      }
+      .purchase-phone-active {
+        top: 120px;
+        transform: translate3d(70px, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide logistics-slide">
+          <img
+            src="./images/logistics-phone.png"
+            alt=""
+            class="logistics-phone"
+            id="logistics-phone"
+          />
+          <img
+            src="./images/logistics-person.png"
+            alt=""
+            class="logistics-person"
+            id="logistics-person"
+          />
+          <img
+            src="./images/logistics-text.png"
+            alt=""
+            class="logistics-text"
+            id="logistics-text"
+          />
+        </div>
+        <div class="swiper-slide purchase-slide">
+          <img
+            src="./images/purchase-phone.png"
+            alt=""
+            class="purchase-phone"
+            id="purchase-phone"
+          />
+          <img
+            src="./images/purchase-person.png"
+            alt=""
+            class="purchase-person"
+            id="purchase-person"
+          />
+          <img
+            src="./images/purchase-text.png"
+            alt=""
+            class="purchase-text"
+            id="purchase-text"
+          />
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="./swiper-bundle.min.js"></script>
+    <script>
+      const ids = [
+        ['logistics-phone', 'logistics-person', 'logistics-text'],
+        ['purchase-phone', 'purchase-person', 'purchase-text']
+      ];
+
+      new Swiper('.swiper-container', {
+        direction: 'vertical',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        mousewheel: true,
+        on: {
+          init() {
+            // 在初始化时触发一次 slideChangeTransitionEnd 事件
+            this.emit('slideChangeTransitionEnd');
+          },
+          slideChangeTransitionEnd() {
+            // console.log(this.activeIndex);
+            for (const id of ids[this.activeIndex]) {
+              const $el = document.getElementById(id);
+              $el.classList.add(`${id}-active`);
+            }
+
+            if (typeof this.previousIndex !== 'undefined') {
+              for (const id of ids[this.previousIndex]) {
+                const $el = document.getElementById(id);
+                $el.classList.remove(`${id}-active`);
+              }
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
+```
+
