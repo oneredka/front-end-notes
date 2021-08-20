@@ -35,11 +35,10 @@ span{
 
 ```css
 .box{
-   
     width:50%;
     height:200px;
     background:blue;
-     position:absolute;
+    position:absolute;
 }
 ```
 
@@ -50,7 +49,7 @@ span{
 
 ```css
 .box{
-  	display:none;
+  	 display:none;
     width:200px;
     height:200px;
     background:blue;
@@ -236,26 +235,6 @@ span{
 ```css
 /* 不推荐 */
 .m-xxx div{ ... }
-```
-
-#### 简写css颜色属性值
-
-```cs
-/* 不推荐 */
-.box{ color:#000000; background-color:#ddeeff; }
-/* 推荐 */
-.box{ color:#000; background-color:#def;}
-```
-
-#### 删除css属性值为0的单位
-
-> 0就是0，任何单位都不需要,只要前面的数值为0,后面的单位都可以去掉 .
-
-```css
-/* 不推荐 */
-.box{ margin:0px; padding:0px;}
-/* 推荐 */
-.box{ margin:0; padding:0;}
 ```
 
 #### 删除无用CSS样式
