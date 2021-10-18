@@ -87,7 +87,7 @@ body{
     color: @color;
 }
 a:hover {
-    color:  @color;
+    color: @color;
 }
 ```
 
