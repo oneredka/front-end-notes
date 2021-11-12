@@ -707,8 +707,6 @@ function resolvePromise(promise2, x, resolve, reject) {
 
 
 
-
-
 ## 将then方法变为可选参数
 
 ```js

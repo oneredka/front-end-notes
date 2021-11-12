@@ -165,11 +165,9 @@ console.log('这里是同步的');
 
 > Promise 一般用来解决层层嵌套的回调函数（**回调地狱 callback hell**）的问题
 
-[[![DdfKZn.png](https://s3.ax1x.com/2020/11/25/DdfKZn.png)](https://imgchr.com/i/DdfKZn)](https://imgchr.com/i/DdfKZn)
+![DdfKZn.png](https://s3.ax1x.com/2020/11/25/DdfKZn.png)
 
 
-
-![image-20201125233156332](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201125233156332.png)
 
 
 

@@ -118,9 +118,9 @@ xml标记语言
 >
 >  ② B站搜索提示
 
-[![rCagYT.png](https://i.loli.net/2020/12/15/2opfGxZNMWstQd4.png)](https://imgchr.com/i/rCagYT)
+[![rCagYT.png](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20211026213514.png)](https://imgtu.com/i/rCagYT)
 
-[![rCah6J.png](https://s3.ax1x.com/2020/12/09/rCah6J.png)](https://imgchr.com/i/rCah6J)
+[![rCah6J.png](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20211026213519.png)](https://imgchr.com/i/rCah6J)
 
 
 
@@ -138,7 +138,7 @@ xml标记语言
 >
 > Mac MAMP
 
-[![BoyQx0.png](https://s1.ax1x.com/2020/11/08/BoyQx0.png)](https://imgchr.com/i/BoyQx0)
+[![BoyQx0.png](https://raw.githubusercontent.com/xixixiaoyu/cloundImg/main/img/20211026213526.png)](https://imgchr.com/i/BoyQx0)
 
 # 2.Ajax的基本用法
 
